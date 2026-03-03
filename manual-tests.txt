@@ -74,4 +74,15 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * The field should be properly populated after step 3.
 
 
+# Module 5: Add button to status page
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+3. Click the Exit button to return to the first page.
+
+## Expected results
+* The button should properly take you back to the first page.
+
+
 
