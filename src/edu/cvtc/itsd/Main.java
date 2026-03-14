@@ -41,7 +41,9 @@ public class Main {
     public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (fb.getDocument() != null
+      && stringToAdd != null
+      && stringToAdd.matches("\\d+")) {
         super.insertString(fb, offset, stringToAdd, attr);
       }
       else {
@@ -53,7 +55,8 @@ public class Main {
     public void replace(FilterBypass fb, int offset, int lengthToDelete, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (fb.getDocument() != null
+          && (stringToAdd == null || stringToAdd.matches("\\d*"))) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
       }
       else {
@@ -105,6 +108,7 @@ public class Main {
   static JLabel labelReason;
   static JLabel labelUser;
   static JLabel labelState;
+  static JButton exitButton;
   static JButton buttonAcknowledge;
 
   // Timer variables //////////////////////////////////////////////////////////
@@ -289,6 +293,14 @@ public class Main {
     labelState.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     labelState.setForeground(new Color(108, 117, 125));
     panelStatus.add(labelState);
+
+    exitButton = new JButton("Exit");
+    exitButton.setFont(fontMain);
+    exitButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    exitButton.setForeground(Color.black);
+    exitButton.addActionListener(handler);
+    panelStatus.add(exitButton);
+
 
     panelStatus.add(Box.createVerticalGlue());
 

@@ -62,6 +62,29 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * Should display "Developer" for the user name.
 
 
+# Module 4: Restrict input fields to numbers
+
+## Test steps
+1. Build and run CiCo.
+2. Enter abcdef$&! into the field.
+3. Enter 00000000 into the field and click Update.
+
+## Expected results
+* The field should remain empty after step 2.
+* The field should be properly populated after step 3.
+
+
+# Module 5: Add button to status page
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+3. Click the Exit button to return to the first page.
+
+## Expected results
+* The button should properly take you back to the first page.
+
+
 # Module 6: Aesthetic and minimalist design
 
 ## Test steps
@@ -69,3 +92,5 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ## Expected results
 * The color scheme of the application should have monochromatic scheme primarily using neutral colors.
+
+
