@@ -85,4 +85,12 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * The button should properly take you back to the first page.
 
 
+# Module 6: Aesthetic and minimalist design
+
+## Test steps
+1. Build and run CiCo.
+
+## Expected results
+* The color scheme of the application should have monochromatic scheme primarily using neutral colors.
+
 
